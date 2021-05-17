@@ -21,20 +21,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/article/{id}', [ArticleController::class, 'show']);
-//Route::get('/article', [ArticleController::class, 'show']);
 
-//Route::get('/category/{id}', [CategoryController::class, 'show']);
 Route::get('/category', [CategoryController::class, 'show']);
 
-//Route::get('/tag/{id}', [TagController::class, 'show']);
 Route::get('/tag', [TagController::class, 'show']);
 
 Auth::routes();
 
-//Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-
-// Route::get('mailContactUs', [ContactFormController::class, '__invoke']);
 Route::get('/contact', function(){
     return view('contact');
 });
