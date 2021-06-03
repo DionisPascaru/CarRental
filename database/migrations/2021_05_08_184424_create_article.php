@@ -21,14 +21,14 @@ class CreateArticle extends Migration
             $table->dateTime('created_at');
             $table->dateTime('modified_at');
             $table->dateTime('published_at');
-            $table->string('SEO_title', 60);
-            $table->string('SEO_description', 150);
+            $table->string('seo_title', 60);
+            $table->string('seo_description', 150);
             $table->string('slug')->unique();
-            $table->BigInteger('author_id')->unsigned();
+            $table->bigInteger('author_id')->unsigned();
             $table->foreign('author_id')->references('id')->on('users');
-            $table->BigInteger('category_id')->unsigned();
+            $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('specifications');
-            $table->BigInteger('specification_id')->unsigned();
+            $table->bigInteger('specification_id')->unsigned();
             $table->foreign('specification_id')->references('id')->on('specifications');
         });
     }

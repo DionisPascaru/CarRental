@@ -14,8 +14,8 @@ class Category extends Model
         'updated_at',
         'parent_category_id',
         'slug',
-        'SEO_title',
-        'SEO_description'
+        'seo_title',
+        'seo_description'
     ];
 
     public function categories(){

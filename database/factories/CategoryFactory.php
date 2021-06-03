@@ -28,8 +28,8 @@ class CategoryFactory extends Factory
             'created_at' => $this->faker->dateTimeThisMonth(),
             'updated_at' => $this->faker->dateTimeThisMonth(),
             'slug' => Str::slug($this->faker->name(), '-'),
-            'SEO_title' => $this->faker->title(),
-            'SEO_description' => $this->faker->realText(150),
+            'seo_title' => $this->faker->title(),
+            'seo_description' => $this->faker->realText(150),
         ];
     }
 }

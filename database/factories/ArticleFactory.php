@@ -31,8 +31,8 @@ class ArticleFactory extends Factory
             'author_id' => $this->faker->numberBetween(5,50),
             'category_id' => $this->faker->numberBetween(5,31),
             'specification_id' => $this->faker->numberBetween(5,31),
-            'SEO_title' => $this->faker->title(),
-            'SEO_description' => $this->faker->title(),
+            'seo_title' => $this->faker->title(),
+            'seo_description' => $this->faker->title(),
             'slug' => $this->faker->title()
         ];
     }

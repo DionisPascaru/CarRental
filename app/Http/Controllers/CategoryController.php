@@ -9,11 +9,7 @@ class CategoryController extends Controller
 {
     public function show()
     {
-//        return  [
-//            'category' => Category::findOrFail($id, ['name'])
-//        ];
-
-        $category = Category::all('name');
+        $category = Category::all('name', 'description');
         return view('category', ['categories' => $category]);
     }
 }

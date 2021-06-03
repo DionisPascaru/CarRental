@@ -1,0 +1,58 @@
+.about-us {
+    position: relative;
+    min-height: 50vh;
+
+    .about-us-content {
+        max-width: 800px;
+        text-align: center;
+    }
+}
+
+.about-us-parallax {
+    background-image: url('../../public/images/aboutusparallax.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.8;
+}
+
+.card {
+    position: relative;
+    border: none;
+    border-radius: 0;
+
+    .card-img-top {
+        border-radius: 0;
+    }
+
+    .card-body {
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        padding: 0;
+    }
+
+    .card-title {
+        background-color: rgba(#283655, 0.5);
+        border: none;
+        border-radius: 0;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .card-body {
+        .btn {
+            background-color: #283655;
+            border: none;
+            border-radius: 0;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            line-height: 1;
+        }
+    }
+}
+

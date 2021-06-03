@@ -19,10 +19,10 @@ class CreateCategories extends Migration
             $table->string('description');
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
-            $table->BigInteger('parent_category_id')->unsigned()->nullable();
+            $table->bigInteger('parent_category_id')->unsigned()->nullable();
             $table->string('slug')->unique();
-            $table->string('SEO_title', 60);
-            $table->string('SEO_description', 150);
+            $table->string('seo_title', 60);
+            $table->string('seo_description', 150);
             $table->foreign('parent_category_id')->references('id')->on('categories');
         });
     }
