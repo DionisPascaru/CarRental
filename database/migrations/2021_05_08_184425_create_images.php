@@ -20,7 +20,7 @@ class CreateImages extends Migration
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
             $table->integer('size');
-            $table->BigInteger('article_id')->unsigned();
+            $table->bigInteger('article_id')->unsigned();
             $table->foreign('article_id')->references('id')->on('articles');
         });
     }

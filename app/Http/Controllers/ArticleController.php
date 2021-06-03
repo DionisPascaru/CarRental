@@ -10,7 +10,6 @@ class ArticleController extends Controller
 {
     public function show($id)
     {
-
         $images = Article::find($id)->images->select('path')->where('article_id', '=', $id)->get();
         $article = Article::find($id);
 

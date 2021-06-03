@@ -1,5 +1,19 @@
-body {
-    background-color: #1E1F26;
+.about-us {
+    position: relative;
+    min-height: 50vh;
+
+    .about-us-content {
+        max-width: 800px;
+        text-align: center;
+    }
+}
+
+.about-us-parallax {
+    background-image: url('../../public/images/aboutusparallax.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.8;
 }
 
 .card {

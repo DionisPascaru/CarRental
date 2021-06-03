@@ -20,7 +20,7 @@ class CreateComments extends Migration
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
             $table->boolean('approved')->default(false);
-            $table->BigInteger('article_id')->unsigned();
+            $table->bigInteger('article_id')->unsigned();
             $table->foreign('article_id')->references('id')->on('articles');
         });
     }

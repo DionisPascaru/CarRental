@@ -14,8 +14,8 @@ class CreateArticlesTagsConnections extends Migration
     public function up()
     {
         Schema::create('articles_tags_connections', function (Blueprint $table) {
-            $table->BigInteger('article_id')->unsigned();
-            $table->BigInteger('tag_id')->unsigned();
+            $table->bigInteger('article_id')->unsigned();
+            $table->bigInteger('tag_id')->unsigned();
             $table->foreign('article_id')->references('id')->on('articles');
             $table->foreign('tag_id')->references('id')->on('tags');
         });
