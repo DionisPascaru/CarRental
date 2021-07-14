@@ -2,6 +2,10 @@ body {
     background-color: #1E1F26;
 }
 
+main {
+    margin-top: 55px;
+}
+
 p,
 h1,
 h2,
@@ -14,3 +18,21 @@ h3 {
     color: #000;
 }
 
+nav.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    top: 0;
+    background-color: rgba(000, 000, 000, 0.5);
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.card .card-body {
+    top: 100px;
+    color: #fff;
+}

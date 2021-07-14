@@ -12,20 +12,17 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .vue()
     .js('resources/js/custom.js', 'public/js')
+    .js('resources/js/thumbnail-slider.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .sourceMaps();
+    .version()
 
-mix.options({
-    // Don't perform any css url rewriting by default
-    processCssUrls: true,
-})
-
-// mix.sass('resource/sass/app.scss', 'public/css', {
-//     // Rewrite CSS urls for app.scss
-//     processUrls: true,
-// });
+// mix.options({
+//     processCssUrls: true,
+// })
 
 mix.copy('node_modules/slick-carousel/slick', 'public/assets/slick');
+mix.copy('node_modules/bootstrap/dist/js/bootstrap.js', 'public/assets/bootstrap');
 mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/assets/js');
 mix.copy('resources/assets/images', 'public/assets/images');

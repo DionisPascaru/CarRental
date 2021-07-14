@@ -1,0 +1,53 @@
+.slide {
+    position: relative;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide img {
+    width: auto;
+}
+
+.slider-track {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.slider-track::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-prev,
+.btn-next {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 34px;
+    border: none;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-prev {
+    left: -100px;
+    background-image: url('../../resources/assets/images/arrow.png');
+    transform: rotate(180deg);
+}
+
+.btn-next {
+    right: -100px;
+    background-image: url('../../resources/assets/images/arrow.png');
+}

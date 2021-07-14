@@ -10836,6 +10836,10 @@ body {
   background-color: #1E1F26;
 }
 
+main {
+  margin-top: 55px;
+}
+
 p,
 h1,
 .h1,
@@ -10852,6 +10856,25 @@ h3,
   color: #000;
 }
 
+nav.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.card .card-body {
+  top: 100px;
+  color: #fff;
+}
+
 .about-us {
   position: relative;
   min-height: 50vh;
@@ -10866,6 +10889,7 @@ h3,
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
   opacity: 0.8;
 }
 
@@ -10901,4 +10925,62 @@ h3,
   padding: 10px 20px;
   font-size: 18px;
   line-height: 1;
+}
+
+.product .card-body {
+  top: auto;
+}
+
+.slide {
+  position: relative;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide img {
+  width: auto;
+}
+
+.slider-track {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-prev,
+.btn-next {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 34px;
+  border: none;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-prev {
+  left: -100px;
+  background-image: url(/images/arrow.png?d8e450abd5962145818090305cf57b27);
+  transform: rotate(180deg);
+}
+
+.btn-next {
+  right: -100px;
+  background-image: url(/images/arrow.png?d8e450abd5962145818090305cf57b27);
 }

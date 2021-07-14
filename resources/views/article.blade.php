@@ -15,7 +15,7 @@
 
                 <div class="col-md-6">
                     <div class="position-relative m-3 pl-5 pr-5">
-                        <div id="car-slick-slider">
+                        <div id="car-details-slider">
                             @foreach($images as $img)
                                 <div class="car-image">
                                     <img class="img-fluid" src="{{ asset('assets/images/'.$img->path) }}">
@@ -47,6 +47,9 @@
                         </ul>
                     </div>
                 </div>
+                <!-- <div class="col-sm-6">
+                    <AddToCart/>
+                </div> -->
             </div>
         </div>
     </div>

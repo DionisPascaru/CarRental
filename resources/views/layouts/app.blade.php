@@ -13,15 +13,15 @@
 {{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
     <script type="text/javascript" src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/slick/slick.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/bootstrap/bootstrap.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}" defer></script>
-
+    <script src="{{ asset('js/thumbnail-slider.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 
     <link rel="stylesheet" type="text/css" href="/assets/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/slick/slick-theme.css"/>
@@ -29,7 +29,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -57,10 +57,12 @@
                             <a class="nav-link" href="/contact">Contact us</a>
                         </li>
                     </ul>
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <Cart/>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -98,9 +100,13 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main id="app">
             @yield('content')
         </main>
     </div>
+
+    <footer>
+        <script src="{{ mix('/js/app.js') }}"></script>
+    </footer>
 </body>
 </html>

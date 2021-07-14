@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#car-slick-slider").slick({
-        dots: true
+    $("#navbarDropdown").click(function(){
+        $('.dropdown-menu').toggle();
     });
 });
